@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未成年人法律知识测试</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>《预防未成年人犯罪法》知识测试</h1>
+            <div class="quiz-info">
+                <span id="quiz-type">必出题目</span>
+                <span id="score">得分: 0</span>
+            </div>
+        </header>
+
+        <div class="quiz-container">
+            <!-- 推文展示区 -->
+            <div id="tweet-container" class="hidden">
+                <div class="tweet-header">
+                    <img src="https://abs.twimg.com/favicons/twitter.ico" class="tweet-icon">
+                    <span class="tweet-author">普法官方微博</span>
+                </div>
+                <div id="tweet-content"></div>
+                <a id="tweet-link" target="_blank" class="tweet-button">查看完整推文</a>
+            </div>
+
+            <!-- 题目区 -->
+            <div id="question-container">
+                <h2 id="question">题目加载中...</h2>
+                <div id="options-container"></div>
+                <button id="submit-btn" class="hidden">提交答案</button>
+            </div>
+
+            <!-- 答题结果 -->
+            <div id="result-container" class="hidden">
+                <p id="result-text"></p>
+                <p id="explanation"></p>
+                <p id="reference"></p>
+                <button id="next-btn">下一题</button>
+            </div>
+        </div>
+
+        <div id="progress">
+            <span id="current-question">1</span>/<span id="total-questions">20</span>
+        </div>
+
+        <!-- 最终统计 -->
+        <div id="final-container" class="hidden">
+            <h2>测试结果统计</h2>
+            <div id="feedback-image"></div>
+            <div id="score-summary">
+                <p>总分: <span id="final-score">0</span>/<span id="total-possible">20</span></p>
+                <p>正确率: <span id="correct-rate">0%</span></p>
+            </div>
+            <div id="feedback">
+                <h3 id="feedback-title">反馈标题</h3>
+                <p id="feedback-content">反馈内容...</p>
+            </div>
+            <button id="restart-btn">重新测试</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
